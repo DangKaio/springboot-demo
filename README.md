@@ -9,5 +9,10 @@ src/test/下的测试入口：DemoApplicationTests
 初始pom.xml:
 spring-boot-starter：核心模块，包括自动配置支持、日志和YAML
 spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito
-2.引入web模块,需添加spring-boot-starter-web模块    https://mvnrepository.com/
+2.引入web模块,需添加spring-boot-starter-web模块    maven仓库地址：https://mvnrepository.com/
   编写服务HelloController，启动成功
+  
+ 3.编写单元测试
+  编写一个简单的单元测试来模拟http请求
+  使用MockServletContext来构建一个空的WebApplicationContext，这样我们创建的HelloController就可以
+  在@Before函数中创建并传递到MockMvcBuilders.standaloneSetup（）函数中。
